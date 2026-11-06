@@ -40,6 +40,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -123,7 +124,6 @@
               ]
             },
             "id": "a3ecacee-e480-4d00-a4e6-49bbb215ee7d",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer(human end user)\n",
@@ -157,6 +157,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -240,7 +241,6 @@
               ]
             },
             "id": "32f6470b-5d87-4a0e-946e-f44e7dde7a43",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Admin(human admin)\n",
@@ -255,7 +255,7 @@
           },
           {
             "position": {
-              "x": -3648,
+              "x": -3668,
               "y": -970
             },
             "size": {
@@ -274,6 +274,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -367,13 +368,12 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 3
+            }
           },
           {
             "position": {
-              "x": -4130,
-              "y": -740
+              "x": -4200,
+              "y": -732
             },
             "size": {
               "width": 210,
@@ -391,6 +391,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -474,7 +475,6 @@
               ]
             },
             "id": "a7532f96-c656-4463-8227-facad705fb7b",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Chat Web App\n(Auth0 web client)",
@@ -493,7 +493,7 @@
           {
             "position": {
               "x": -3935,
-              "y": -794
+              "y": -732
             },
             "size": {
               "width": 210,
@@ -511,6 +511,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -607,13 +608,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 5
+            }
           },
           {
             "position": {
               "x": -3935,
-              "y": -582
+              "y": -482
             },
             "size": {
               "width": 210,
@@ -631,6 +631,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -727,13 +728,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 6
+            }
           },
           {
             "position": {
               "x": -4200,
-              "y": -542
+              "y": -482
             },
             "size": {
               "width": 210,
@@ -751,6 +751,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -847,13 +848,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 7
+            }
           },
           {
             "position": {
-              "x": -3638,
-              "y": -794
+              "x": -3663,
+              "y": -732
             },
             "size": {
               "width": 210,
@@ -871,6 +871,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -967,13 +968,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 8
+            }
           },
           {
             "position": {
-              "x": -3638,
-              "y": -582
+              "x": -3663,
+              "y": -482
             },
             "size": {
               "width": 210,
@@ -991,6 +991,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1087,13 +1088,12 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 9
+            }
           },
           {
             "position": {
-              "x": -4100,
-              "y": -340
+              "x": -4110,
+              "y": -210
             },
             "size": {
               "width": 240,
@@ -1114,6 +1114,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 10,
             "ports": {
               "groups": {
                 "top": {
@@ -1197,7 +1198,6 @@
               ]
             },
             "id": "c8f01a96-841c-49ba-bfc9-e4bbf70dbce9",
-            "zIndex": 10,
             "data": {
               "type": "tm.Store",
               "name": "RAG Vector Store",
@@ -1215,9 +1215,61 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F1 OIDC login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "F1 OIDC login"
+            ],
+            "id": "fc976149-2be9-4208-81c4-50f0e6c6929c",
+            "source": {
+              "cell": "a3ecacee-e480-4d00-a4e6-49bbb215ee7d",
+              "port": "98d63bbf-b64c-4353-9619-d0aa4fbd1579"
+            },
+            "target": {
+              "cell": "a7532f96-c656-4463-8227-facad705fb7b",
+              "port": "e316a331-aa0a-464e-81a4-f43f979dc986"
+            },
+            "vertices": [
+              {
+                "x": -4060,
+                "y": -780
+              }
+            ]
+          },
+          {
             "position": {
-              "x": -3720,
-              "y": -340
+              "x": -3780,
+              "y": -210
             },
             "size": {
               "width": 240,
@@ -1238,6 +1290,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1335,60 +1388,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 11
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 12,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "bb2f9c20-dc5c-480e-9acc-e4a4d81bb774",
-            "source": {
-              "x": -4100,
-              "y": -820
-            },
-            "target": {
-              "cell": "a7532f96-c656-4463-8227-facad705fb7b",
-              "port": "e316a331-aa0a-464e-81a4-f43f979dc986"
-            },
-            "vertices": [
-              {
-                "x": -4120,
-                "y": -770
-              }
-            ]
+            }
           }
         ]
       }
