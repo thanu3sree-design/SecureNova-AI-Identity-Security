@@ -1,0 +1,16 @@
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "21 requests in 60s"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "22 requests in 60s"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "23 requests in 60s"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "24 requests in 60s"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "25 requests in 60s"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "26 requests in 60s"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "SCOPE_CHANGE", "detail": "read:ai-data -> read:ai-data write:admin"}
+{"timestamp": "2026-11-08T06:57:09", "identity": "agent-001", "event_type": "TOKEN_REUSE_AFTER_EXPIRY", "detail": "expired token presented"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "21 requests in 60s"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "22 requests in 60s"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "23 requests in 60s"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "24 requests in 60s"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "25 requests in 60s"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "LLM_CALL_VOLUME_SPIKE", "detail": "26 requests in 60s"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "SCOPE_CHANGE", "detail": "read:ai-data -> read:ai-data write:admin"}
+{"timestamp": "2026-11-08T07:15:52", "identity": "agent-001", "event_type": "TOKEN_REUSE_AFTER_EXPIRY", "detail": "expired token presented"}
