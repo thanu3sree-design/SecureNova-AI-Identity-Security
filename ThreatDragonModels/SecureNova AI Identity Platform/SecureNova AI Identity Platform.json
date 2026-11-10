@@ -276,6 +276,58 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F1 OIDC login (Auth Code + PKCE)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "F1 OIDC login (Auth Code + PKCE)"
+            ],
+            "id": "eca84fcc-5142-478e-8c4c-4a2662933ebf",
+            "source": {
+              "cell": "f4765b05-e097-4c43-8c7c-98cdfe1e2d82",
+              "port": "3c139fd4-f205-4099-8a3c-e3216d6fddfc"
+            },
+            "target": {
+              "cell": "4a71099e-b6a3-4488-8007-8203b95da482",
+              "port": "0a1cb0fc-6d9d-4978-9014-5aa30d988919"
+            },
+            "vertices": [
+              {
+                "x": 116,
+                "y": -80
+              }
+            ]
+          },
+          {
             "position": {
               "x": -4743.75,
               "y": -1257
@@ -1175,7 +1227,7 @@
           {
             "position": {
               "x": 60,
-              "y": -200
+              "y": -220
             },
             "size": {
               "width": 112.5,
@@ -2610,58 +2662,6 @@
               "storesInventory": false,
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 31,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "fb4c7460-aa79-4fe1-bb46-9c772a9b0cc6",
-            "source": {
-              "x": 40,
-              "y": -150
-            },
-            "target": {
-              "x": 120,
-              "y": -53
-            },
-            "vertices": [
-              {
-                "x": 70,
-                "y": -110
-              }
-            ]
           }
         ]
       }
