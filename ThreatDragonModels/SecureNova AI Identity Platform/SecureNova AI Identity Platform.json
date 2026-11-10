@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "f8759e94-41e9-46db-b2fa-f952fec97da0",
             "zIndex": -1,
+            "id": "f8759e94-41e9-46db-b2fa-f952fec97da0",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary1 -USER LAYER\n",
@@ -55,8 +55,8 @@
           },
           {
             "position": {
-              "x": -1000.0000000000027,
-              "y": -1019.9999999999977
+              "x": -987.5,
+              "y": -1058
             },
             "size": {
               "width": 680,
@@ -69,8 +69,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "de1e3f77-21b7-4b93-94a3-092dc51c885e",
             "zIndex": -1,
+            "id": "de1e3f77-21b7-4b93-94a3-092dc51c885e",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary 2 - AGENT LAYER\n",
@@ -95,7 +95,7 @@
           },
           {
             "position": {
-              "x": -307.5,
+              "x": -287.5,
               "y": -1020
             },
             "size": {
@@ -109,8 +109,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "a817c5b0-0310-4f60-bad3-4311108137e6",
             "zIndex": -1,
+            "id": "a817c5b0-0310-4f60-bad3-4311108137e6",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary 3 - INTERNAL APIs\n",
@@ -143,8 +143,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "97b03e2f-db51-44c9-980c-459b188af281",
             "zIndex": -1,
+            "id": "97b03e2f-db51-44c9-980c-459b188af281",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary 4 - EXTERNAL SERVICES",
@@ -409,7 +409,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -430,16 +431,61 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "e237835c-b6a3-45f1-8789-324d1b239ee1",
+                  "title": "Stolen or replayed Bearer token",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker reuses a valid or expired JWT obtained through prompt injection or log leakage to call internal REST APIs with the agent’s privileges",
+                  "mitigation": "Use short-lived access tokens (maximum 300 seconds), enable refresh token rotation, validate audience (aud), issuer (iss) and expiry (exp) on every request, and store tokens securely. Reject reused or expired tokens.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "1d3c5581-bdbe-487e-9931-949379118041",
+                  "title": "Over-privileged token returns excessive data",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The agent’s access token contains broader scopes than the end-user is entitled to, allowing retrieval of PII or admin-level data.\nThreat 3",
+                  "mitigation": "Apply least-privilege scopes. Issue tokens with only the minimum required permissions (e.g. read:ai-data). Perform server-side authorization checks on every API call instead of trusting the token scope alone.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "5c58e6c7-407c-4d6e-a5ba-ff24199d16cc",
+                  "title": "Scope escalation to write:admin",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "A compromised or spoofed agent identity obtains the write:admin scope and performs privileged actions on behalf of a normal user",
+                  "mitigation": "Enforce strict scope validation. Never allow an agent to self-elevate privileges. Use separate M2M clients for different privilege levels and bind high-privilege actions to additional controls (e.g. Ed25519 signature verification or human approval).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "de1e3f77-21b7-4b93-94a3-092dc51c885e",
                 "a817c5b0-0310-4f60-bad3-4311108137e6"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "F4 Bearer JWT\n"
@@ -457,6 +503,10 @@
               {
                 "x": -470,
                 "y": -810
+              },
+              {
+                "x": -370,
+                "y": -835
               }
             ]
           },
@@ -2182,6 +2232,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Thanu Sree",
-    "threatTop": 0
+    "threatTop": 3
   }
 }
